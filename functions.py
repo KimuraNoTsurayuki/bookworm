@@ -28,6 +28,27 @@ def filterPriceByArea(pure_data,val):
 			res_list.append(int(point[price]))
 	return np.array(res_list)
 
+def filterAreaByPrice(pure_data,val):
+	res_list = []
+	for point in pure_data:	
+		if (float(point[price]) == val):
+			res_list.append(int(point[area]))
+	return np.array(res_list)
+	
+def filterPriceByLocation(pure_data,val):
+	res_list = []
+	for point in pure_data:	
+		if (float(point[location]) == val):
+			res_list.append(int(point[price]))
+	return np.array(res_list)
+	
+def filterAreaByLocation(pure_data,val):
+	res_list = []
+	for point in pure_data:	
+		if (float(point[location]) == val):
+			res_list.append(int(point[area]))
+	return np.array(res_list)
+
 def createQuantifiableData(pure_data):
 	res = dict()
 	res.update({price: createPriceData(pure_data)})
