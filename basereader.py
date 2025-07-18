@@ -1,6 +1,6 @@
 import json
 
-data = str()
+data = []
 database = str()
 
 def setDatabaseName(name):
@@ -14,7 +14,7 @@ def makeData(db):
 	with open(db, 'r') as file:
     		global data 
     		data = json.load(file)
-    
+
 def exportData():
 	return data
 
